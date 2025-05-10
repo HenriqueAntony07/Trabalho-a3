@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Linear Passo a Passo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      padding: 20px;
+    }
+    .step {
+      display: none;
+      margin: 10px 0;
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #4caf50;
+    }
+    button {
+      padding: 10px 15px;
+      margin-top: 10px;
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Resolvendo um Sistema Linear – Passo a Passo</h2>
+
+  <div class="step" id="step1">
+    <strong>Sistema:</strong><br>
+    x + y = 5  &nbsp;&nbsp; (1)<br>
+    2x - y = 4  &nbsp;&nbsp; (2)
+  </div>
+
+  <div class="step" id="step2">
+    <strong>Passo 1:</strong> Isolar uma variável na equação (1):<br>
+    x + y = 5 → y = 5 - x
+  </div>
+
+  <div class="step" id="step3">
+    <strong>Passo 2:</strong> Substituir y na equação (2):<br>
+    2x - (5 - x) = 4<br>
+    2x - 5 + x = 4 → 3x = 9 → x = 3
+  </div>
+
+  <div class="step" id="step4">
+    <strong>Passo 3:</strong> Substituir x para encontrar y:<br>
+    y = 5 - 3 = 2
+  </div>
+
+  <div class="step" id="step5">
+    ✅ <strong>Solução:</strong> x = 3, y = 2<br>
+    O ponto (3, 2) é a solução do sistema.
+  </div>
+
+  <button onclick="showNextStep()">Mostrar próximo passo</button>
+
+  <script>
+    let currentStep = 0;
+    function showNextStep() {
+      currentStep++;
+      const step = document.getElementById(`step${currentStep}`);
+      if (step) {
+        step.style.display = 'block';
+      } else {
+        alert("Todos os passos foram exibidos.");
+      }
+    }
+  </script>
+
+</body>
+</html>

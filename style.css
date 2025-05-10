@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+section {
+  padding: 20px 0;
+}
+.navbar-nav .nav-link {
+  cursor: pointer;
+}
+.step {
+display: none;
+margin: 10px 0;
+background: #222;
+padding: 15px;
+border-radius: 8px;
+border-left: 4px solid #4caf50;
+}
+
+.img{
+  align-items: center;
+  width: 150px;
+  margin-left:25%;
+}
